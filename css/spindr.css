@@ -1,0 +1,53 @@
+/* Spindr Styling */
+
+.spindr {
+	background-color: #fdf7eb;
+	color: #343434;
+	/*height: 400px;
+	width: 200px;*/
+}
+
+.innerContent {
+	width: 50%;
+	height: 90%;
+	margin: auto;
+	min-height: 100px;
+	min-width: 50px;
+}
+
+.pollieProfile {
+	height: 65%;
+}
+
+.staticSpindrButtons {
+	height: 25%;
+}
+
+/* Image behaviour */
+
+img {
+	max-width: 300px;
+}
+
+/* Buttons */
+
+.button {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+	margin: 0.2rem
+}
+
+.noButton {
+	background-color: red;
+}
+
+.yesButton {
+	background-color: green;
+}
+
+.menuButton {
+	background-color: transparent;
+	width: 2rem;
+	height: 2rem;
+}

@@ -1,0 +1,22 @@
+psuedo code for Spindr
+
+1 - User arrives on Spindr page
+2 - User prompted to enter post code
+3 - That filters out politicians near them
+4 - User can then swipe left or right on pollies
+5 - all 'yes' swipes (right swipes) are then saved, after swiping through all pollies, user can get further details about their "matches".
+
+IF user enters postcode that matches array THEN display images appropriately
+ELSE display message stating "that is not ready ready, hold tight!"
+
+WHEN postcode is selected, THEN display matching images.
+
+IF image is swiped left THEN hide and remove from "results"
+IF image is swiped right THEN hide image and add to "results"
+IF no more images THEN goto "results"
+
+
+
+3 - postcode is an identifier within an array of images
+4 -
+
