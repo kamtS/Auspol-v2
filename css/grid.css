@@ -1,0 +1,54 @@
+/* Responsive Grid */
+
+.row {
+	width: 96%;
+
+}
+
+.col1 {
+	width: 8%;
+}
+
+.col2 {
+	width: 16%;
+}
+
+.col3 {
+	width: 24%;
+}
+
+.col4 {
+	width: 32%;
+}
+
+.col5 {
+	width: 40%;
+}
+
+.col6 {
+	width: 48%;
+}
+
+.col7 {
+	width: 56%;
+}
+
+.col8 {
+	width: 64%;
+}
+
+.col9 {
+	width: 72%;
+}
+
+.col10 {
+	width: 80%;
+}
+
+.col11 {
+	width: 88%;
+}
+
+.col12 {
+	width: 96%;
+}
