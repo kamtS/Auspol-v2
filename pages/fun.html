@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
 		<title>Auspol</title>
 
-		<link rel="reset" href="../css/normalise.css">
+		<link rel="reset" href="../css/normalize.css">
 		<link rel="stylesheet" href="../css/style.css">
 		<link rel="stylesheet" href="../css/spindr.css">
 
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script rel="jquery" src="../js/index.js"></script>
+		<script rel="jquery" src="js/jquery.js"></script>
 
 	</head>
 
@@ -22,58 +23,70 @@
 					</h1>
 					<h2 class="dynamicPageName"></h2>
 				</div>
-			</div>
 			
-			<div class="nav">
-				<nav>
-					<ul>
-						<li>
-							<a href="fact.html">Fact</a>
-						</li>
+			
+				<div class="nav">
+					<nav>
+						<ul>
+							<li>
+								<a href="fact.html">Fact</a></li>
+							<li>
+								<a href="fiction.html">Fiction</a></li>
+							<li>
+								<a href="fun.html">Fun</a></li>
+						</ul>
+					</nav>
 
-						<li>
-							<a href="fiction.html">Fiction</a>
-						</li>
-
-						<li>
-							<a href="fun.html">Fun</a>
-						</li>
-					</ul>
-				</nav>
+				</div>
+				<div class="clearFix"></div>
 			</div>
 		</header>
 
 		<main>
-			<div class="spindr">
+
+		<div class="spindrSearch">
+			<form>
+				<input type="text" id="postcodeSearch" placeholder="Enter postcode here...">
+				<input type="submit" value="Enter" id="submitButton">
+			</form>
+		</div>
+
+			<div class="spindr" id="spindrApp">
 				<div class="innerContent">
 					<div class="pollieProfile">
 						<div class="profileImage">
-							<img src="../data/images/Ellen_Sandell.png">
+							<img id="profileImg" src="../data/images/pollies/Ellen_Sandell.png">
 						</div>
 
 						<div class="pollieName">
 							<h2 class="dynamicPollieName">Joe Blogs</h2>
-							<p>Greens</p>
+							<p class="dynamicParty">Greens</p>
 						</div>
 					</div>
 
 					<div class="staticSpindrButtons">
-						<div class="noButton alignleft button"></div>
-						<div class="menuButton alignleft button"></div>
-						<div class="yesButton alignleft button"></div>
+						<div class="noButton alignleft button">
+							<img class="icon" src="../data/images/buttons/round73.svg">
+						</div>
+						<div class="menuButton alignleft button">
+							<img class="iconSmall" src="../data/images/buttons/music236.svg">
+						</div>
+						<div class="yesButton alignleft button">
+							<img class="icon" src="../data/images/buttons/round68.svg">
+						</div>
 						<div class="clear clearFix"></div>
 					</div>
 
 					
 				</div>
-				 <div class="clearFix"></div>
+				<div class="clearFix"></div>
 			</div>
 		</main>
 
 
 		<footer>
 			<div class="footer">
-				<p>Made by Dan Johnson 2016</p>	
+				<p>Made by Dan Johnson 2016</p>
 			</div>
 			<div class="clearFix"></div>
 		</footer>
