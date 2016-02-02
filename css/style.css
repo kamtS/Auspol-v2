@@ -1,3 +1,4 @@
+
 /******************************************
 /* SETUP
 /*******************************************/
@@ -34,12 +35,13 @@
 }
 
 
-/***************************** 
-          BASE STYLE 
+/*****************************
+          BASE STYLE
 *****************************/
 
 body {
   width: 100%;
+  min-width: 504px;
   margin: 0px;
   font-family: monospace;
 }
@@ -55,6 +57,10 @@ header {
 }
 
 .header {
+  background-color: #f15d5d;
+  color: #fffdd6 ;
+  margin: 0px;
+  height: 18%;
   padding: 4px 0px;
 }
 
@@ -70,6 +76,7 @@ h1 {
 h1 a {
   text-decoration: none;
   color: #fffdd6;
+  font-size: 3rem;
 }
 
 /* Nav */
@@ -99,18 +106,22 @@ li {
 
 main {
   width:  89%;
-  height: 73%;
+  min-height: 73%;
   padding: 4px 0px;
   text-align: center;
+  margin: 0px auto;
 }
 
 /* Footer */
 
 footer {
   background-color: #f15d5d;
+  color:  #fffdd6;
   text-align: center;
-  height: 11%
+  height: 11%;
   width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
 }
 
 /* */
@@ -119,7 +130,21 @@ footer {
 
 /* */
 
-/* */
+/* Spindr Page */
+
+#spindrApp {
+
+}
+
+.spindrSearch {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  
+}
+
+form {
+  margin: auto;
+}
 
 
 

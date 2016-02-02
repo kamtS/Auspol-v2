@@ -3,6 +3,11 @@
 .spindr {
 	background-color: #fdf7eb;
 	color: #343434;
+	margin: 0px auto;
+	margin-bottom: 1rem;
+	padding: 0px;
+	min-height: 10.2rem;
+	min-width: 6rem;
 	/*height: 400px;
 	width: 200px;*/
 }
@@ -10,9 +15,9 @@
 .innerContent {
 	width: 50%;
 	height: 90%;
-	margin: auto;
-	min-height: 100px;
-	min-width: 50px;
+	margin: 0 auto;
+	min-height: 10.2rem; /*ratio of 1.7H for ever 1W to create a tinder-looking card/profile type thing*/
+	min-width: 6rem;
 }
 
 .pollieProfile {
@@ -21,6 +26,7 @@
 
 .staticSpindrButtons {
 	height: 25%;
+	margin: 0px auto;
 }
 
 /* Image behaviour */
@@ -35,7 +41,7 @@ img {
 	border-radius: 50%;
 	width: 3rem;
 	height: 3rem;
-	margin: 0.2rem
+	margin: 1rem;
 }
 
 .noButton {
@@ -50,4 +56,13 @@ img {
 	background-color: transparent;
 	width: 2rem;
 	height: 2rem;
+}
+
+.icon {
+	width: 4em;
+}
+
+.iconSmall {
+	width: 2em;
+	margin-top: 1em;
 }
