@@ -146,6 +146,23 @@ form {
   margin: auto;
 }
 
+.cardContainer {
+  position: relative;
+  height: 400px;
+  width: 250px;
+  margin: 0px auto;
+}
 
+.innerContent {
+  position: absolute;
+}
 
+/* Spindr Animations */
 
+.removed {
+  
+}
+
+.matched {
+  
+}

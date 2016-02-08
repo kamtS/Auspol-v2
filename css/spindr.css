@@ -13,26 +13,62 @@
 }
 
 .innerContent {
-	width: 50%;
-	height: 90%;
+	/*width: 50%;
+	height: 90%;*/
+	height: 400px;
+	width:  250px;
 	margin: 0 auto;
 	min-height: 10.2rem; /*ratio of 1.7H for ever 1W to create a tinder-looking card/profile type thing*/
 	min-width: 6rem;
 }
 
+/* Profile style/template */
+
+.pollieCard {
+    background-color: white;
+    margin: 4px 0px;
+    padding-top: 0.5rem;
+}
+
 .pollieProfile {
-	height: 65%;
+	height: 72%;
+    padding: 2px;
+    border: 2px;
+    border-color: gray;
+    border-style: solid;
+    margin: 0px 2px;
+}
+
+.pollieName {
+    height: 15%;
+    background-color: black;
+    margin: 4px 11px;
 }
 
 .staticSpindrButtons {
-	height: 25%;
-	margin: 0px auto;
+	height: 20%;
+    margin: 5px auto;
+    padding-left: 9px;
+}
+
+.dynamicPollieName {
+    margin:0px;
+}
+
+.dynamicParty {
+    margin:0px;
 }
 
 /* Image behaviour */
 
-img {
+.icon img {
 	max-width: 300px;
+}
+
+#profileImg {
+    height: 13.5rem;
+    width:  13.5rem;
+    margin-top: 5px;
 }
 
 /* Buttons */
@@ -43,7 +79,7 @@ img {
 	height: 3rem;
 	margin: 1rem;
 }
-
+/*
 .noButton {
 	background-color: red;
 }
@@ -51,7 +87,7 @@ img {
 .yesButton {
 	background-color: green;
 }
-
+*/
 .menuButton {
 	background-color: transparent;
 	width: 2rem;
@@ -60,9 +96,18 @@ img {
 
 .icon {
 	width: 4em;
+	border-radius: 50%;
 }
 
 .iconSmall {
 	width: 2em;
 	margin-top: 1em;
+}
+
+.yes {
+    background-color: green;
+}
+
+.no {
+    background-color: red;
 }
