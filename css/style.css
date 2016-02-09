@@ -130,10 +130,10 @@ footer {
 
 /* */
 
-/* Spindr Page */
+/* ### Spindr Page ### */
 
 #spindrApp {
-
+    
 }
 
 .spindrSearch {
@@ -157,16 +157,31 @@ form {
   position: absolute;
 }
 
-#sorryMsg {
-    display: none;
+.sorryMsg {
+    margin-top: 1 rem;
+}
+
+#sorryMsg p {
+  margin:   0px;
 }
 
 /* Spindr Animations */
 
+/*rotate-left*/
 .removed {
-  
+  transform: rotate(-30deg) scale(0.8);
+  transition: 1s;
+  opacity: 0;
+  margin-left: -400px;
+  cursor: w-resize;
 }
 
+
+/*rotate-right*/
 .matched {
-  
+  transform: rotate(30deg) scale(0.8);
+  transition: 1s;
+  margin-left: 400px;
+  cursor: e-resize;
+  opacity: 0;
 }

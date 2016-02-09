@@ -49,7 +49,6 @@ $('document').ready(function() {
 
 	//Spindr postcode search bar
 	$('#cardContainer').hide();
-	$('#sorryMsg').hide();
 	
 
 	$('#submitButton').click(function(e) {
@@ -83,7 +82,7 @@ $('document').ready(function() {
 		
 		//Below will display error message if postcode search (userInput) doesn't match a postcode in pollieProfiles
 		if (foundPollieArray.length===0){
-		    $('#sorryMsg').replaceWith("<p>Sorry your suburb isn't available yet, check back soon</p>");
+		    $('#sorryMsg').replaceWith("<p id='#sorryMsg'>Sorry your suburb isn't available yet, check back soon!</p>");
 		}
 		
 		
@@ -108,17 +107,30 @@ $('document').ready(function() {
 			    '</div>'].join(''));
             */
             
-
-    		$('.noButton').bind(click, function() {
+            //Below is the animation and pushing to new array Function, using the .on function.
+            /*
+            $('.noButton').on("click", function() {
     			$(this).closest('.pollieCard').addClass("removed");
     			rejectedPollies.push(element.name);
     		});
     
-    		$('.yesButton').bind(click, function() {
+    		$('.yesButton').on("click", function() {
     			$(this).closest('pollieCard').addClass("matched");
     			matchedPollies.push(element.name);
     		});
+            */
+            
+            //below is the same as above, instead using the .bind function
+    		$('.noButton').bind("click", function() {
+    			$(this).closest('.pollieCard').addClass("removed");
+    			rejectedPollies.push(element.name);
+    		});
     
+    		$('.yesButton').bind("click", function() {
+    			$(this).closest('.pollieCard').addClass("matched");
+    			matchedPollies.push(element.name);
+    		});
+            
     
             /*
         	$('#profileImg').append('<img src= "../data/images/pollies/' + element.imgName + '.png"> ');

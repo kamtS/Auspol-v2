@@ -15,7 +15,7 @@
 .innerContent {
 	/*width: 50%;
 	height: 90%;*/
-	height: 400px;
+	height: 385px;
 	width:  250px;
 	margin: 0 auto;
 	min-height: 10.2rem; /*ratio of 1.7H for ever 1W to create a tinder-looking card/profile type thing*/
@@ -26,7 +26,7 @@
 
 .pollieCard {
     background-color: white;
-    margin: 4px 0px;
+    margin-top: 6px;
     padding-top: 0.5rem;
 }
 
@@ -41,7 +41,6 @@
 
 .pollieName {
     height: 15%;
-    background-color: black;
     margin: 4px 11px;
 }
 
