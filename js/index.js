@@ -1,10 +1,12 @@
 $('document').ready(function() {
 	// body...
 	console.log('is this working');
+	
+    //Dynamic Page Name code
+    $('.dynamicPageName').replaceWith('<h2></h2>')
 
-  //Spindr Data Array
-  var pollieProfiles = [
-	{
+    //Spindr Data Array
+    var pollieProfiles = [{
 		name: "Ellen Sandell",
 		imgName: "Ellen_Sandell",
 		postcode: "3000",
@@ -27,28 +29,23 @@ $('document').ready(function() {
 		imgName: "Clem_Newton_Brown",
 		postcode: "4000",
 		party: "Liberal"
-	}
-
-	];
+	}];
 
 
 	var foundPollieArray = [] ;
-
-
 	var rejectedPollies = [] ;
-
 	var matchedPollies = [] ;
 
-		/* OK so, when a user enters a postcode I only want them to see Politicians with a matching postcode
-		as identified in the array "pollieProfiles" So if I create a "master array" that then filters only objects with matching postcodes
-		into a 2nd array, the spindr app then pulls its data from the 2nd "dynamic" array.
+	/* OK so, when a user enters a postcode I only want them to see Politicians with a matching postcode
+	as identified in the array "pollieProfiles" So if I create a "master array" that then filters only objects with matching postcodes
+	into a 2nd array, the spindr app then pulls its data from the 2nd "dynamic" array.
 
-		So to do that...
+	So to do that...
 
-		IF userInput = pollieProfiles.postcode THEN copy all that = pollProfiles.postcode to dynamicPollieArray
+	IF userInput = pollieProfiles.postcode THEN copy all that = pollProfiles.postcode to dynamicPollieArray
 
-		var dynamicPollieArray [ ] ;
-		*/
+	var dynamicPollieArray [ ] ;
+	*/
 
 	//Spindr postcode search bar
 	$('#cardContainer').hide();
@@ -57,52 +54,79 @@ $('document').ready(function() {
 
 	$('#submitButton').click(function(e) {
 		e.preventDefault();
-	//	$('#sorryMsg').hide();
+		$('#sorryMsg').hide();
 
 		var userInput = $('#postcodeSearch').val();
 			userInput = userInput.trim();
 
-				pollieProfiles.forEach(function(element){
-					console.log(userInput, element);
-					if (userInput === element.postcode) {
-						foundPollieArray.push(element);
-						
-						console.log('Array has been pushed');
+		pollieProfiles.forEach(function(element){
+			console.log(userInput, element);
+			if (userInput === element.postcode) {
+				foundPollieArray.push(element);
+				
+				console.log('Array has been pushed');
 
-							
+			    $('#cardContainer').show();
+			    console.log('IF statement success');
+		    }
+		    /*else {
+		        
+		        // $('#cardContainer').hide();
+		        console.log('ELSE statement success');
+		        //$('#sorryMsg').show();*/
+		    
 
-					$('#cardContainer').show();
-				} else {
-					$('#sorryMsg').show();
-				};
-			
-			/*Here I want to iterate over the fPA, as I do this I want to take each string from the objects of the array
-			and have them render appropriate HTML in one action. In essence, they all stack atop each other.*/
+		    /*Here I want to iterate over the fPA, as I do this I want to take each string from the objects of the array
+		    and have them render appropriate HTML in one action. In essence, they all stack atop each other.*/
 			
 		});
+		
+		//Below will display error message if postcode search (userInput) doesn't match a postcode in pollieProfiles
+		if (foundPollieArray.length===0){
+		    $('#sorryMsg').replaceWith("<p>Sorry your suburb isn't available yet, check back soon</p>");
+		}
+		
+		
 
-					foundPollieArray.forEach(function(element) {
-						$('.cardContainer').append('<div class="innerContent pollieCard"> <div class="pollieProfile"> <div class="profileImage"> <img id="profileImg" src="../data/images/pollies/' + element.imgName + '.png' + '"> </div> <div class="pollieName"> <h2 class="dynamicPollieName">' + element.name + '</h2> <p class="dynamicParty">' + element.party + '</p> </div> </div> <div class="staticSpindrButtons"> <div class="noButton alignleft button"> <img class="icon no" src="../data/images/buttons/round73.svg"> </div> <div class="menuButton alignleft button"> <img class="iconSmall" src="../data/images/buttons/music236.svg"> </div> <div class="yesButton alignleft button"> <img class="icon yes" src="../data/images/buttons/round68.svg"> </div> <div class="clear clearFix"></div> </div> </div>')
+		foundPollieArray.forEach(function(element) {
+			$('.cardContainer').append('<div class="innerContent pollieCard"> <div class="pollieProfile"> <div class="profileImage"> <img id="profileImg" src="../data/images/pollies/' + element.imgName + '.png' + '"> </div> <div class="pollieName"> <h2 class="dynamicPollieName">' + element.name + '</h2> <p class="dynamicParty">' + element.party + '</p> </div> </div> <div class="staticSpindrButtons"> <div class="noButton alignleft button"> <img class="icon no" src="../data/images/buttons/round73.svg"> </div> <div class="menuButton alignleft button"> <img class="iconSmall" src="../data/images/buttons/music236.svg"> </div> <div class="yesButton alignleft button"> <img class="icon yes" src="../data/images/buttons/round68.svg"> </div> <div class="clear clearFix"></div> </div> </div>');
+			
+			/*
+			$('.cardContainer').append(
+			    '<div>' +
+			        '<h1>' +
+			            '<p>some stuff</p>' +
+			        '</h1>' +
+			    '</div>');
 
-				$('.noButton').bind(click, function() {
-					$(this).closest('.pollieCard').addClass("removed");
-					rejectedPollies.push(element.name);
+            $('.cardContainer').append([
+			    '<div>',
+			        '<h1>',
+			            '<p>some stuff</p>',
+			            element.name,
+			        '</h1>',
+			    '</div>'].join(''));
+            */
+            
 
-				});
+    		$('.noButton').bind(click, function() {
+    			$(this).closest('.pollieCard').addClass("removed");
+    			rejectedPollies.push(element.name);
+    		});
+    
+    		$('.yesButton').bind(click, function() {
+    			$(this).closest('pollieCard').addClass("matched");
+    			matchedPollies.push(element.name);
+    		});
+    
+    
+            /*
+        	$('#profileImg').append('<img src= "../data/images/pollies/' + element.imgName + '.png"> ');
+        	$('.dynamicPollieName').append('<h2>' + element.name + "</h2>")
+        	$('.dynamicParty').append('<p>' + element.party + "</p>")
+            */
 
-				$('.yesButton').bind(click, function() {
-					$(this).closest('pollieCard').addClass("matched");
-					matchedPollies.push(element.name);
-				});
-
-
-/*
-					    	$('#profileImg').append('<img src= "../data/images/pollies/' + element.imgName + '.png"> ');
-					    	$('.dynamicPollieName').append('<h2>' + element.name + "</h2>")
-					    	$('.dynamicParty').append('<p>' + element.party + "</p>")
-*/
-
-						});
+		});
 		//add
 
 		//$('#spindrApp').show();

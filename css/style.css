@@ -157,6 +157,10 @@ form {
   position: absolute;
 }
 
+#sorryMsg {
+    display: none;
+}
+
 /* Spindr Animations */
 
 .removed {
