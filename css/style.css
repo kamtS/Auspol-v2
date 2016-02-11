@@ -155,6 +155,11 @@ form {
 
 .innerContent {
   position: absolute;
+  z-index: 1;
+}
+
+.pollieCard.notdone {
+    z-index:99;
 }
 
 .sorryMsg {
