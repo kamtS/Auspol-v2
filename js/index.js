@@ -74,18 +74,19 @@ $('document').ready(function() {
         
             pollieProfiles.forEach(function(element) {
                 console.log(userInput, element);
-                if (userInput === element.postcode) {
-                    pollieFound = true;
-                    console.log($.inArray(userInput, foundPollieArray));
-        
-                    foundPollieArray.push(element);
-                    lastPostcodeArray.push(element.postcode);
-                    
-                    console.log('Array has been pushed');
-        
-                    $('.cardContainer').show();
-                    console.log('IF statement success');
-                }
+                //element.postcode.forEach(postcode1);
+                    if (userInput === element.postcode) {
+                        pollieFound = true;
+                        console.log($.inArray(userInput, foundPollieArray));
+            
+                        foundPollieArray.push(element);
+                        lastPostcodeArray.push(element.postcode);
+                        
+                        console.log('Array has been pushed');
+            
+                        $('.cardContainer').show();
+                        console.log('IF statement success');
+                    }
         
         
                 /*else {
@@ -136,31 +137,31 @@ $('document').ready(function() {
 
         foundPollieArray.forEach(function(element) {
             $('.cardContainer').append('<div id="pollieCard" class="innerContent pollieCard notdone"> <div class="pollieProfile"> <div class="profileImage"> <img id="profileImg" src="../data/images/pollies/' + element.imgName + '.png' + '"> </div> <div class="pollieName"> <h2 class="dynamicPollieName">' + element.name + '</h2> <p class="dynamicParty">' + element.party + '</p> </div> </div> <div class="staticSpindrButtons"> <div class="noButton alignleft button"> <img class="icon no" src="../data/images/buttons/round73.svg"> </div> <div class="menuButton alignleft button"> <img class="iconSmall" src="../data/images/buttons/music236.svg"> </div> <div class="yesButton alignleft button"> <img class="icon yes" src="../data/images/buttons/round68.svg"> </div> <div class="clear clearFix"></div> </div> </div>');
-
-
+        
+        
             //2 better ways of displaying HTML mark-up in JS
             /*
-			$('.cardContainer').append(
-			    '<div>' +
-			        '<h1>' +
-			            '<p>some stuff</p>' +
-			        '</h1>' +
-			    '</div>');
-
-            $('.cardContainer').append([
-			    '<div>',
-			        '<h1>',
-			            '<p>some stuff</p>',
-			            element.name,
-			        '</h1>',
-			    '</div>'].join(''));
-            */
+        			$('.cardContainer').append(
+        			    '<div>' +
+        			        '<h1>' +
+        			            '<p>some stuff</p>' +
+        			        '</h1>' +
+        			    '</div>');
+        
+                    $('.cardContainer').append([
+        			    '<div>',
+        			        '<h1>',
+        			            '<p>some stuff</p>',
+        			            element.name,
+        			        '</h1>',
+        			    '</div>'].join(''));
+                    */
             function actionEmptyStack() {
-                if((".pollieCard.notdone").length){
+                if ((".pollieCard.notdone").length) {
                     console.log('Pollie card stack is now empty');
-                    matchedPollies.forEach(function(element) {
+                    /*matchedPollies.forEach(function(element) {
                         $('.cardContainer').append('<div class="pollieResults"> <div class="matchedPollieProfileCard"> <div class="innerLayer"> <div class="pollieProfileImg"> <img class="profileImg" src=""> </div> <div class="pollieProfileContent"> <h2 class="dynamicPollieName"></h2> <p class="dynamicParty"></p>  <p class="pollieBio"></p> <div class="moreInfo"></div> </div> </div> </div> </div>')
-                    }
+                    }*/
                 }
             }
 
