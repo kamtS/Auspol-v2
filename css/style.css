@@ -54,6 +54,7 @@ header {
   margin: 0px;
   height: 18%;
   padding: 4px 0px
+  width: 100%;
 }
 
 .header {
@@ -124,7 +125,39 @@ footer {
   font-size: 1rem;
 }
 
-/* */
+/* Style for Twitter Feeds */
+.auspolFeed {
+    width: 45%;
+    margin: 2%;
+    border: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    min-width: 260px;
+    border-color: #d3d3d3;
+}
+
+.vicpolFeed {
+    width: 45%;
+    margin: 2%;
+    border: 2px;
+    border-style: solid;
+    border-radius: 6px;
+    min-width: 260px;
+    border-color: #d3d3d3;
+}
+
+.centre {
+    position:relative;
+    margin:auto;
+}
+
+.socialFeed {
+    position:relative;
+    margin:auto;
+    width: 80%;
+    text-align:center;
+}
+
 
 /* */
 
@@ -155,7 +188,7 @@ form {
 
 .innerContent {
   position: absolute;
-  z-index: 1;
+  /*z-index: 1;*/
 }
 
 .pollieCard.notdone {
@@ -163,7 +196,12 @@ form {
 }
 
 .sorryMsg {
-    margin-top: 1 rem;
+    padding-top: 0.8rem;
+    font-size: 1.5rem;
+    max-width: 55%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #sorryMsg p {
@@ -190,3 +228,53 @@ form {
   cursor: e-resize;
   opacity: 0;
 }
+
+/* Results Page style */
+
+.pollieResults {
+    background-color:black /*#fdf7eb*/;
+    color: #343434;
+    padding: 10px;
+    min-height: 10.2rem;
+    min-width: 6rem;
+}
+
+.innerLayer {
+    display:inline-flex;
+}
+
+.matchedPollieProfileCard {
+    width: 98%;
+    height: 15%;
+    min-height: 70px;
+    background-color: white;
+    margin: auto;
+    border-radius:5px;
+}
+
+.pollieProfileImg {
+    width: 27%;
+    background-color: gray;
+    margin:5px auto;
+}
+
+.pollieProfileContent {
+    width: 71%;
+    background-color: #fffdd6;
+    color: black;
+    margin:5px auto;
+    text-align:left;
+    padding:4px;
+}
+
+.profileImg {
+    width:80%;
+    margin:27px auto;
+}
+
+/*  */
+
+
+/* Media break at 800px - focus on making Pollie Profile img from results page look like polaroid */
+
+/* Media break at 760px to move "more info" button from content div to profile img div */
