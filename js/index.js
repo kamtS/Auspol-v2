@@ -157,26 +157,34 @@ $('document').ready(function() {
         			    '</div>'].join(''));
                     */
             function actionEmptyStack() {
-                if ((".pollieCard.notdone").length) {
+                if ((".pollieCard.notdone").length === 0) {
                     console.log('Pollie card stack is now empty');
-                    /*matchedPollies.forEach(function(element) {
+                    matchedPollies.forEach(function(element) {
                         $('.cardContainer').append('<div class="pollieResults"> <div class="matchedPollieProfileCard"> <div class="innerLayer"> <div class="pollieProfileImg"> <img class="profileImg" src=""> </div> <div class="pollieProfileContent"> <h2 class="dynamicPollieName"></h2> <p class="dynamicParty"></p>  <p class="pollieBio"></p> <div class="moreInfo"></div> </div> </div> </div> </div>')
-                    }*/
+                    });
+                    console.log('pollieResults should be rendered')
                 }
+            
             }
 
+            function displayPollieResults() {
+                
+            }
 
             $('.noButton').bind("click", function() {
                 $(this).closest('.pollieCard').addClass("removed").removeClass("notdone");
                 rejectedPollies.push(element.name);
+                console.log('pollie name pushed to rejectedPollies');
                 actionEmptyStack();
+                console.log('actionEmptyStack has been run or passed over');
             });
 
             $('.yesButton').bind("click", function() {
                 $(this).closest('.pollieCard').addClass("matched").removeClass("notdone");
                 matchedPollies.push(element);
                 actionEmptyStack();
-                console.log('pollie name pushed');
+                console.log('actionEmptyStack has been run or passed over');
+                console.log('pollie name pushed to matchedPollies');
                 
                 console.log(element.name, element.bio, element.imgName);
                 
